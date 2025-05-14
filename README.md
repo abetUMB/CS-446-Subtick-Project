@@ -6,7 +6,7 @@ This project shows an extension of the Mirror networking library.
 
 The script files we made can be found in the script folder and SubTelepathy folder:
 
-Scripts:
+## Scripts:
 - GameList
 - Menu
 - PlayerScript
@@ -15,6 +15,6 @@ Scripts:
 - ShootManager
 - TeleportManager
 - Weapon
-SubTelepathy:
+## SubTelepathy:
 - SubTick
 - SubTickBehaviour
