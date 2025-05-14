@@ -63,14 +63,14 @@ public class SubTick : NetworkBehaviour
 
     private IEnumerator SubTickRoutine()
     {
-        int prev = 0;
+        int prevTick = 0;
         while(true)
         {
             int netTick = GetCurrentTick();
             float netTime = GetCurrentNetworkTime();
             //Debug.Log($"networkTick:{netTick}\nnetworkTime:{netTime}");
             // every full tick, execute all actions in order
-            if (netTick != prev)
+            if (netTick != prevTick)
             {
                 if (actions.Count > 0)
                 {
@@ -91,8 +91,8 @@ public class SubTick : NetworkBehaviour
                     // empty actions
                     actions.Clear();
                 }
-                // set prev
-                prev = netTick;
+                // set prevTick
+                prevTick = netTick;
             }
             // release main thread
             yield return null;
